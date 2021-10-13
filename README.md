@@ -1,24 +1,6 @@
-# README
+# Welcome to BookCritiq
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Info
 
-Things you may want to cover:
+This is the API backend for the BookCritiq project, which was created as a final project for the Flatiron School software engineering program. You can find the front end repo for this project <a href="https://github.com/jrrohrer/book-critiq-fe">here</a>.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
