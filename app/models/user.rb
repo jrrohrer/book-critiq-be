@@ -3,6 +3,6 @@ class User < ApplicationRecord
 
   has_many :reviews
   has_many :books, through: :reviews
-  #has_many :comments
-  #has_many :reviews, through: :comments
+  has_many :comments
+  has_many :reviews, through: :comments
 end
