@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(username: "jrrohrer", password: "password")
 Book.create(title: "The Secret Garden", author: "Frances Hodgson Burnett", description: "When orphaned Mary Lennox comes to live at her uncle's great house on the Yorkshire Moors, she finds it full of secrets. The mansion has nearly one hundred rooms, and her uncle keeps himself locked up. And at night, she hears the sound of crying down one of the long corridors.")
+Review.create(title: "The Secret Garden: A Trip Down Memory Lane", content: "The Secret Garden is one of my favorite books, and was one of the first chapter books I read. I remember taking turns reading with my Mother, and Mary's journey and adventures with her cousin captivated me and lead to a lifelong love of historical fiction novels.", user_id: 1, book_id: 1)
