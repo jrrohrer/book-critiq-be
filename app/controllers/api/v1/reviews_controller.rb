@@ -15,10 +15,10 @@ class Api::V1::ReviewsController < ApplicationController
 
   # POST /reviews
   def create
-    @review = Review.new(review_params)
-
+    @book = Book.find_by_id(params[:book_id])
+    @review = @book.reviews.create(review_params)
     if @review.save
-      render json: @review, status: :created, location: @review
+      render json: @review, status: :created
     else
       render json: @review.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class Api::V1::ReviewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def review_params
-      params.require(:review).permit(:title, :content, :user_id, :book_id)
+      params.require(:review).permit(:title, :content, :book_id)
     end
 end
