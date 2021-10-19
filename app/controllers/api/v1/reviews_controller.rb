@@ -18,7 +18,7 @@ class Api::V1::ReviewsController < ApplicationController
     @book = Book.find_by_id(params[:book_id])
     @review = @book.reviews.create(review_params)
     if @review.save
-      render json: @review, status: :created
+      render json: BookSerializer.new(@book), status: :created
     else
       render json: @review.errors, status: :unprocessable_entity
     end
