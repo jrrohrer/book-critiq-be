@@ -36,6 +36,8 @@ class Api::V1::ReviewsController < ApplicationController
   # DELETE /reviews/1
   def destroy
     @review.destroy
+    book = Book.find_by_id(params[:book_id])
+    render json: BookSerializer.new(book)
   end
 
   private
