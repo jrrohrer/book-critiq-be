@@ -36,6 +36,7 @@ class Api::V1::BooksController < ApplicationController
   # DELETE /books/1
   def destroy
     @book.destroy
+    render json: @book.id
   end
 
   private
