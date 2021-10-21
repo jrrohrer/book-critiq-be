@@ -30,5 +30,18 @@
 - removed relationships related to users and comments for now. Only relationships I'm currently working with are book has many reviews and review belongs to book.
 - added image_url to the book table so that books can be created with an image url to the book cover.
 
+## 10-15-21
+- adjusted the book#create action so that it returns serialized data
+
+## 10-18-21
+- nested review routes under book routes. Review components won't render without going through the book components. URLs will be /books/:id/reviews or /books/:id/reviews/new or /books/:id/reviews/:review_id
+
+## 10-19-21
+- refactored the reviews#create method to correctly handle data coming from the front end
+- refactored reviews#destroy to return altered book object to the front end
+
+## 10-21-21
+- added validations to book and review models
+
+
 ### Considerations
-- should the routes be further namespaced? should reviews be accessible without books?
